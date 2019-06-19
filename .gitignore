@@ -1,0 +1,6 @@
+.classpath
+.project
+.settings/
+junit.jar
+target/
+junit-4.13-beta-3.jar
