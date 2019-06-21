@@ -21,4 +21,9 @@ public class Square {
 		return tic;
 	}
 	
+	@Override
+	public String toString() {
+		return tic.toString();
+	}
+	
 }
