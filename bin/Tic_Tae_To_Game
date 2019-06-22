@@ -1,0 +1,2 @@
+PARKING_LOT_SCRIPT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+java -cp "$PARKING_LOT_SCRIPT"/../target/TicTacToGame-1.0-SNAPSHOT.jar   com.gd.game.ticktactoe.game.TicTacToGame $1

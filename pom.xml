@@ -35,8 +35,8 @@
 	        <artifactId>maven-compiler-plugin</artifactId>
 	        <version>3.8.1</version>
 	        <configuration>
-	          <source>1.7</source>
-	          <target>1.7</target>
+	          <source>1.8</source>
+	          <target>1.8</target>
 	        </configuration>
 	      </plugin>
 	    <plugin>
@@ -44,13 +44,13 @@
 	      <configuration>
 	        <archive>
 	          <manifest>
-	            <mainClass>com.gojeck.pl.main.ParkingLotApplication</mainClass>
+	            <mainClass>com.gd.game.ticktactoe.game.TicTacToGame</mainClass>
 	          </manifest>
 	        </archive>
 	        <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
-         	<finalName>ParkingLot-1.0-SNAPSHOT</finalName>
+         	<finalName>TicTacToGame-1.0-SNAPSHOT</finalName>
         	<appendAssemblyId>false</appendAssemblyId>
 	      </configuration>
 	      

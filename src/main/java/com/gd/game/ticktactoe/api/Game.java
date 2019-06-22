@@ -1,14 +1,11 @@
 package com.gd.game.ticktactoe.api;
 
-import com.gd.game.ticktactoe.exception.CellAlreadyMarkedException;
-import com.gd.game.ticktactoe.exception.InvalidCellException;
-import com.gd.game.ticktactoe.model.Board;
+import java.util.Optional;
+
+import com.gd.game.ticktactoe.exception.InvalidMoveException;
+import com.gd.game.ticktactoe.model.Move;
+import com.gd.game.ticktactoe.model.Result;
 
 public interface Game {
-	
-	void addPlayer(String playerName);
-	void addBoard(Board board);
-	void move(Player player, int noOfCell) throws CellAlreadyMarkedException, InvalidCellException;
-	boolean won();
-
+	Optional<Result> move(Move move) throws InvalidMoveException;
 }

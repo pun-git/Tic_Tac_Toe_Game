@@ -1,0 +1,3 @@
+SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
+POM_LOCATION="$SCRIPT_DIR/../pom.xml"
+mvn -f $POM_LOCATION clean package

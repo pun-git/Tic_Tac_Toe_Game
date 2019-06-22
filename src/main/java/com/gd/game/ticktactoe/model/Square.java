@@ -3,7 +3,7 @@ package com.gd.game.ticktactoe.model;
 public class Square {
 
 	private int no;
-	private Tic tic = Tic.NOTIC;
+	private Tic tic = Tic.N;
 	
 	public Square(int no) {
 		this.no = no;
@@ -23,7 +23,7 @@ public class Square {
 	
 	@Override
 	public String toString() {
-		return tic.toString();
+		return tic.getSymbol();
 	}
 	
 }

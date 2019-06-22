@@ -1,7 +1,12 @@
 package com.gd.game.ticktactoe.model;
 
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.gd.game.ticktactoe.exception.CellAlreadyMarkedException;
+import com.gd.game.ticktactoe.exception.InvalidCellException;
 
 public class Board {
 	
@@ -17,7 +22,8 @@ public class Board {
 		return squares.get(no).getTic();
 	}
 	
-	public void setTickInCell(int no, Tic tic) {
+	public void markCellWithTic(int no, Tic tic) throws CellAlreadyMarkedException, InvalidCellException{
+		validate(no);
 		squares.get(no).setTic(tic);
 	}
 	
@@ -30,7 +36,30 @@ public class Board {
 	}
 	
 	public void reset() {
-		squares = new ArrayList<Square>(squares.size());
+		squares.clear();
+		init(cellInSquareSize);;
+	}
+	
+	public void display(OutputStream out) {
+		int count = 0;
+		try{
+			PrintWriter writer = new PrintWriter(out);
+			String print = "";
+			for(int i=0 ; i < cellInSquareSize ; i++) {
+				for(int j=0 ; j < cellInSquareSize ; j++) {
+					if(squares.get(count).getTic() != Tic.N) {
+						print += "   " + squares.get(count ++);
+					}else {
+						print += "   " + count++;
+					}
+				}
+				writer.println(print);
+				print = "";
+			}
+			writer.flush();
+		}finally {
+			
+		}
 	}
 	
 	private void init(int size) {
@@ -43,16 +72,12 @@ public class Board {
 		}
 	}
 	
-	@Override
-	public String toString() {
-		int count = 0;
-		String print = "";
-		for(int i=0 ; i < cellInSquareSize ; i++) {
-			for(int j=0 ; j < cellInSquareSize ; j++) {
-				print += squares.get(count ++);
-			}
-			print+=" \n";
+	private void validate(int noOfCell)  throws CellAlreadyMarkedException, InvalidCellException{
+		if(noOfCell < 0 || squares.size() - 1 < noOfCell) {
+			throw new InvalidCellException("Invalid Cell No");
 		}
-		return print;
+		if(squares.get(noOfCell).getTic() != Tic.N) {
+			throw new CellAlreadyMarkedException("Cell already marked");
+		}
 	}
 }
