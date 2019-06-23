@@ -1,4 +1,3 @@
-#Tic Tac Toe
 Tic Tac Toe is a two player game where two user can select their name also their tic symbol(O,X) supported.
 
 Pre requisite 
@@ -12,11 +11,11 @@ Application will work in unix but can also be made working in windows by updaing
 
 Install
 To build the executable jar file
-parking_lot\bin\setup
+Tic_Tac_To_Game\bin\setup
 
 Execution
 To execute the application
-parking_lot\bin\Tic_Tae_To_Game
+Tic_Tac_To_Game\bin\Tic_Tac_To_Game
 
 User can configure player name and select tic symbol. He then continue playing the game. Currently we support CommandConsole also can be extended to support a console ui to configure and play the game .
 
