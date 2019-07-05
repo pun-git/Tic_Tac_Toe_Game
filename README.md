@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/099b314a09f84ecb993ea8cf372e686d)](https://app.codacy.com/app/pun-git/Tic_Tac_Toe_Game?utm_source=github.com&utm_medium=referral&utm_content=pun-git/Tic_Tac_Toe_Game&utm_campaign=Badge_Grade_Settings)
+
 Tic Tac Toe is a two player game where two user can select their name also their tic symbol(O,X) supported.
 
 Pre requisite 
