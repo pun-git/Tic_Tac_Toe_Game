@@ -26,8 +26,7 @@ public class CommandConsole implements Console{
 		System.out.println("============Welcome to Tic Tac Toe==============");
 		System.out.println("Please let me know the board size");
 		
-		try {
-			scanner = new Scanner(System.in);
+		try(Scanner scanner = new Scanner(System.in)){
 			String size = scanner.nextLine();
 			System.out.println("Do you want to play with ");
 			System.out.println("1. Human");
@@ -56,8 +55,6 @@ public class CommandConsole implements Console{
 			}
 			
 			game = buildGame(Integer.parseInt(size));
-		}finally {
-			
 		}
 	}
 	

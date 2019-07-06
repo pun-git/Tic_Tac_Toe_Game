@@ -24,18 +24,18 @@ public class TieStrategyImplTest
 	}
 	
 	@Test
-	public void test_IfNotMarked() throws Exception{
+	public void testIfNotMarked() throws Exception{
 		assertFalse(tieStrategy.check());
 	}
 	
 	@Test
-	public void test_IfMarkedForWin() throws Exception{
+	public void testIfMarkedForWin() throws Exception{
 		fillForSide(0, 1, board.getCellInSquareSize()-1, Tic.X);
 		assertFalse(tieStrategy.check());
 	}
 	
 	@Test
-	public void test_IfMarkedForNotCorner() throws Exception{
+	public void testIfMarkedForNotCorner() throws Exception{
 		fillForSide(1, 1, board.getCellInSquareSize()-2, Tic.X);
 		fillForSide(board.getCellInSquareSize(), 1, board.getCellInSquareSize()-1, Tic.X);
 		fillForSide(2*board.getCellInSquareSize(), 1, board.getCellInSquareSize()-1, Tic.X);
@@ -44,7 +44,7 @@ public class TieStrategyImplTest
 	}
 	
 	@Test
-	public void test_IfMarkedForNotTie() throws Exception{
+	public void testIfMarkedForNotTie() throws Exception{
 		//X X X O
 		//O O O X
 		//X X X O

@@ -37,13 +37,12 @@ public class Board {
 	
 	public void reset() {
 		squares.clear();
-		init(cellInSquareSize);;
+		init(cellInSquareSize);
 	}
 	
 	public void display(OutputStream out) {
 		int count = 0;
-		try{
-			PrintWriter writer = new PrintWriter(out);
+		try(PrintWriter writer = new PrintWriter(out)){
 			String print = "";
 			for(int i=0 ; i < cellInSquareSize ; i++) {
 				for(int j=0 ; j < cellInSquareSize ; j++) {
@@ -57,8 +56,6 @@ public class Board {
 				print = "";
 			}
 			writer.flush();
-		}finally {
-			
 		}
 	}
 	
